@@ -1,7 +1,6 @@
 const fs = require('fs');
 const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
-const { prefix, token } = require('./config.json');
-const { GameHandler } = require('./game.js');
+const { token } = require('./config.json');
 const args = process.argv.slice(2);
 
 const client = new Client({ partials: ['CHANNEL'], intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES] });
