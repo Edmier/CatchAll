@@ -144,7 +144,10 @@ client.on('messageCreate', async (message) => {
 	if (message.channel.type === 'DM') return;
 	
 	const guild = await DataHandler.getServer(message.guildId);
+	if (!guild) return;
+
 	const channelId = guild.dataValues.catchchannel;
+	if (!channelId) return;
 
 	if (message.channel.id !== channelId) return;
 
