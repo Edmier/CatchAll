@@ -225,11 +225,6 @@ client.on('guildCreate', async (guild) => {
 	DataHandler.createServer(guild.id);
 });
 
-
-client.on('channelDelete', async (channel) => {
-	//Ask what's up if channel is catchchannel
-});
-
 client.login(token);
 
 async function log(guildId, data) {
