@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('servers', {
+    await queryInterface.createTable('guilds', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,21 +9,29 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       guildid: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         unique: true
       },
       catchchannel: {
-        type: DataTypes.STRING
+        type: Sequelize.STRING
       },
       logchannel: {
-        type: DataTypes.STRING
+        type: Sequelize.STRING
       },
       accessrole: {
-        type: DataTypes.STRING
+        type: Sequelize.STRING
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('servers');
+    await queryInterface.dropTable('guilds');
   }
 };
