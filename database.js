@@ -21,7 +21,6 @@ class DataHandler {
         try {
             const server = await this.getServer(guildid);
             if (!server) { 
-                console.log('Server added');
                 return await Guilds.create({ guildid: guildid }); 
             }
             return undefined;
