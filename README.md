@@ -10,6 +10,7 @@ Messages containing a link will result in the user being banned, without is a 12
 
 1. Invite bot
 2. Run /setup
-3. You're done!
+3. Move category to the top of your server
+4. You're done!
 
 More configuration options to be added at a later date
